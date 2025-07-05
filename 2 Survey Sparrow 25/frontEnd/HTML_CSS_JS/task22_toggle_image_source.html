@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 22 - Toggle Image Using Array</title>
+  <style>
+    body { font-family: Arial; text-align: center; padding: 20px; }
+    img { width: 250px; height: 180px; object-fit: cover; margin-bottom: 10px; }
+    button { padding: 10px 20px; }
+  </style>
+</head>
+<body>
+
+  <h2>Toggle Image with Array</h2>
+  <img id="image" src="https://media.istockphoto.com/id/1738048835/photo/empty-garage-with-modern-sports-car.webp?a=1&b=1&s=612x612&w=0&k=20&c=US6ulwkcBpvN4lZ8IKADs_elXFA0RXieKKEkUFnryjU=" alt="Scene">
+  <br>
+  <button onclick="toggleImage()">Next Image</button>
+
+  <script>
+    const images = [
+      "https://media.istockphoto.com/id/1738048835/photo/empty-garage-with-modern-sports-car.webp?a=1&b=1&s=612x612&w=0&k=20&c=US6ulwkcBpvN4lZ8IKADs_elXFA0RXieKKEkUFnryjU=",
+      "https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bHV4dXJ5JTIwY2FyfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1592853625601-bb9d23da12fc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bHV4dXJ5JTIwY2FyfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1592853625511-ad0edcc69c07?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGx1eHVyeSUyMGNhcnxlbnwwfHwwfHx8MA%3D%3D"
+    ];
+
+    let index = 0;
+
+    function toggleImage() {
+      index = (index + 1) % images.length;
+      document.getElementById("image").src = images[index];
+    }
+  </script>
+
+</body>
+</html>
+

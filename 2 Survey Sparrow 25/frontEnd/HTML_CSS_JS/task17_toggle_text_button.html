@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 17 - Toggle Button Text</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { padding: 10px 15px; }
+  </style>
+</head>
+<body>
+
+  <h2>Toggle Button Text</h2>
+  <button id="toggleBtn" onclick="toggleText()">Show More</button>
+
+  <script>
+    function toggleText() {
+      const btn = document.getElementById("toggleBtn");
+      btn.textContent = btn.textContent === "Show More" ? "Show Less" : "Show More";
+    }
+  </script>
+
+</body>
+</html>

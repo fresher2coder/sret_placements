@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 23 - Enable/Disable Input</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { padding: 8px; width: 200px; }
+  </style>
+</head>
+<body>
+
+  <label>
+    <input type="checkbox" onchange="toggleInput()"> Enable Input
+  </label><br><br>
+  <input type="text" id="textInput" disabled placeholder="Disabled by default">
+
+  <script>
+    function toggleInput() {
+      const input = document.getElementById("textInput");
+      input.disabled = !input.disabled;
+    }
+  </script>
+
+</body>
+</html>

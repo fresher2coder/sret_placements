@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 18 - Toggle Quote HTML</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #quoteBox {
+      font-style: italic;
+      border-left: 3px solid #ccc;
+      padding-left: 10px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Toggle Quote</h2>
+  <div id="quoteBox">“The only limit to our realization of tomorrow is our doubts of today.”</div>
+  <button onclick="toggleQuote()">Toggle Quote</button>
+
+  <script>
+    let toggle = false;
+    function toggleQuote() {
+      const quote = document.getElementById("quoteBox");
+      if (!toggle) {
+        quote.innerHTML = "“Success is not final, failure is not fatal: It is the courage to continue that counts.”";
+      } else {
+        quote.innerHTML = "“The only limit to our realization of tomorrow is our doubts of today.”";
+      }
+      toggle = !toggle;
+    }
+  </script>
+
+</body>
+</html>

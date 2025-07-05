@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 8 - Digital Clock</title>
+  <style>
+    body { font-family: 'Courier New', monospace; padding: 20px; text-align: center; }
+    #clock {
+      font-size: 48px;
+      margin-top: 50px;
+      background: black;
+      color: lime;
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h2>Digital Clock</h2>
+  <div id="clock">00:00:00</div>
+
+  <script>
+    function updateClock() {
+      const now = new Date();
+      const time = now.toLocaleTimeString();
+      document.getElementById("clock").textContent = time;
+    }
+    setInterval(updateClock, 1000);
+    updateClock(); // Initial call
+  </script>
+</body>
+</html>

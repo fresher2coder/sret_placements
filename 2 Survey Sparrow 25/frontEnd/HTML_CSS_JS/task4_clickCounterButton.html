@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 4 - Click Counter Button</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { font-size: 18px; }
+  </style>
+</head>
+<body>
+  <h2>Click Counter Button</h2>
+  <button onclick="increment()">Clicked: <span id="count">0</span></button>
+
+  <script>
+    let clicks = 0;
+    function increment() {
+      clicks++;
+      document.getElementById("count").textContent = clicks;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 14 - Show/Hide Paragraph</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #myPara { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Toggle Paragraph</h2>
+  <button onclick="toggleParagraph()">Show/Hide</button>
+  <p id="myPara">This is a paragraph that can be hidden or shown.</p>
+
+  <script>
+    function toggleParagraph() {
+      const para = document.getElementById("myPara");
+      para.style.display = (para.style.display === "none") ? "block" : "none";
+    }
+  </script>
+</body>
+</html>

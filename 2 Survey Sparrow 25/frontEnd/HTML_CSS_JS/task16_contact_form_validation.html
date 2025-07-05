@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 16 - Contact Form with Regex Validation</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+    form {
+      background: white;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+    button {
+      padding: 10px 15px;
+      margin-top: 15px;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    label { margin-top: 15px; display: block; }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Contact Us</h2>
+  <form onsubmit="return validateForm()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Your name">
+    <div id="nameError" class="error"></div>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="you@example.com">
+    <div id="emailError" class="error"></div>
+
+    <label for="message">Message:</label>
+    <textarea id="message" rows="5" placeholder="Your message..."></textarea>
+    <div id="messageError" class="error"></div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let valid = true;
+
+      // Reset error messages
+      document.getElementById("nameError").textContent = "";
+      document.getElementById("emailError").textContent = "";
+      document.getElementById("messageError").textContent = "";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const nameRegex = /^[A-Za-z\s]{2,}$/;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Name validation
+      if (!nameRegex.test(name)) {
+        document.getElementById("nameError").textContent = "Name must contain only letters and be at least 2 characters.";
+        valid = false;
+      }
+
+      // Email validation
+      if (!emailRegex.test(email)) {
+        document.getElementById("emailError").textContent = "Please enter a valid email address.";
+        valid = false;
+      }
+
+      // Message validation
+      if (message.length < 10) {
+        document.getElementById("messageError").textContent = "Message must be at least 10 characters long.";
+        valid = false;
+      }
+
+      if (valid) {
+        alert("Form submitted successfully!");
+      }
+
+      return false; // Prevent actual form submission (for demo purposes)
+    }
+  </script>
+
+</body>
+</html>

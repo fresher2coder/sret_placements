@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 26 - Highlight on Hover</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    p {
+      padding: 10px;
+      transition: background-color 0.3s;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Hover to Highlight</h2>
+  <p onmouseover="this.classList.add('highlight')" onmouseout="this.classList.remove('highlight')">
+    Hover over this paragraph to highlight it.
+  </p>
+
+</body>
+</html>

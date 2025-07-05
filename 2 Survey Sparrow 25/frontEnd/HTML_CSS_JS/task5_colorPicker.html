@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 5 - Color Picker</title>
+  <style>
+    body { font-family: Arial; padding: 20px; transition: background-color 0.3s; }
+    select { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>Color Picker</h2>
+  <label for="color">Choose a color:</label>
+  <select id="color" onchange="changeBackground(this.value)">
+    <option value="">--Select--</option>
+    <option value="lightblue">Light Blue</option>
+    <option value="lightgreen">Light Green</option>
+    <option value="lightcoral">Light Coral</option>
+    <option value="white">White</option>
+  </select>
+
+  <script>
+    function changeBackground(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>

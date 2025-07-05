@@ -1,0 +1,142 @@
+/* Global reset and base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-bottom: 10px;
+}
+
+.task {
+  padding: 30px;
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+}
+
+body.dark .task {
+  background-color: #1e1e1e;
+  color: #e5e5e5;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  margin: 6px 4px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Inputs and selects */
+input,
+select,
+textarea {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 6px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Cards for blog, quiz, like post */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #fafafa;
+}
+
+body.dark .card {
+  background-color: #2b2b2b;
+  border-color: #444;
+}
+
+/* Accordion styles */
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.accordion-question {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.accordion-answer {
+  padding-left: 10px;
+  color: #555;
+}
+
+body.dark .accordion-answer {
+  color: #ccc;
+}
+
+/* Tabs / Nav inside portfolio */
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+body.dark nav a {
+  color: #ddd;
+}
+
+body.dark nav a:hover {
+  color: #66b2ff;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}

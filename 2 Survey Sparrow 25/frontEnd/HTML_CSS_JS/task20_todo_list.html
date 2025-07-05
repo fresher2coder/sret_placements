@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task 20 - To-Do List</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input, button { padding: 5px; margin: 5px; }
+    ul { padding-left: 20px; }
+    li { margin: 5px 0; }
+    .delete-btn {
+      margin-left: 10px;
+      color: red;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>To-Do List</h2>
+  <input type="text" id="todoInput" placeholder="Enter task">
+  <button onclick="addTodo()">Add</button>
+
+  <ul id="todoList"></ul>
+
+  <script>
+    function addTodo() {
+      const input = document.getElementById("todoInput");
+      const value = input.value.trim();
+      if (!value) return;
+
+      const li = document.createElement("li");
+      li.textContent = value;
+
+      const delBtn = document.createElement("span");
+      delBtn.textContent = "✖";
+      delBtn.className = "delete-btn";
+      delBtn.onclick = () => li.remove();
+
+      li.appendChild(delBtn);
+      document.getElementById("todoList").appendChild(li);
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>
