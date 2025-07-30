@@ -21,5 +21,6 @@ int main() {
 
     printf("Sum = %d\n", sum);
     free(arr);
+    arr = NULL;
     return 0;
 }

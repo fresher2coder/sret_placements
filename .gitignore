@@ -4,6 +4,8 @@
 
 #folders
 bin
+demo
+AssessmentQuestions
 
 # Node.js (Backend)
 node_modules/
