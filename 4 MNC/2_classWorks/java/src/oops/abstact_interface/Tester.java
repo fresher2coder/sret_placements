@@ -2,6 +2,9 @@ package oops.abstact_interface;
 
 public class Tester {
     public static void main(String[] args) {
+    	
+    	float a = 10;
+    	
         PaymentMode upi = new UPIPayment();
         upi.greetUser();
         upi.authenticate();
@@ -16,6 +19,13 @@ public class Tester {
 
         // Static method from interface
         PaymentMode.displayLimit();
+        
+        PaymentMode pd;
+        
+        //runtime
+        pd = new UPIPayment();
+        pd = new CreditCard();
+       
     }
 }
 

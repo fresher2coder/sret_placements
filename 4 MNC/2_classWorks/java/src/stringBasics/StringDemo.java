@@ -6,17 +6,17 @@ public class StringDemo {
 		
 		StringDemo obj = new StringDemo();
 		
-		//obj.demo();
+		obj.demo();
 		
-		//obj.concatenation();
+		obj.concatenation();
 		
-		//obj.comparision();
+		obj.comparision();
 		
-		//obj.findString();
+		obj.findString();
 		
-		//obj.conversion();
+		obj.conversion();
 		
-		//obj.printSubString();
+		obj.printSubString();
 		
 		int a = 1331;
 		
